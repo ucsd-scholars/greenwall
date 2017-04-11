@@ -50,7 +50,7 @@ public class EntryScreen extends Screen {
 
     @Override
     public void draw(Canvas c, View v) {
-        int width = 0;
+        int width = v.getWidth();
         int height = v.getHeight();
         if (playBtnBounds == null) {
             // initialize button locations
