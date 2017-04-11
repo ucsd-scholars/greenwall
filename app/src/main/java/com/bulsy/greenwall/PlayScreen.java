@@ -253,9 +253,9 @@ public class PlayScreen extends Screen {
      * initialize and start a game
      */
     void initGame() {
-        score = 0;
+        score = 999999;
         round = 1;
-        lives = START_NUMLIVES;
+        lives = -1;
         hiscore = 0;
 
         clearLists();
