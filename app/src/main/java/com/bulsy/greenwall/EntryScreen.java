@@ -85,8 +85,8 @@ public class EntryScreen extends Screen {
 
     @Override
     public boolean onTouch(MotionEvent e) {
-        //if (playBtnBounds.contains((int)e.getX(), (int)e.getY()))
-        //    act.startGame();
+        if (playBtnBounds.contains((int)e.getX(), (int)e.getY()))
+            act.startGame();
         if (exitBtnBounds.contains((int)e.getX(), (int)e.getY()))
             act.exit();
 
