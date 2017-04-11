@@ -50,7 +50,7 @@ public class EntryScreen extends Screen {
 
     @Override
     public void draw(Canvas c, View v) {
-        int width = v.getWidth();
+        int width = 0;
         int height = v.getHeight();
         if (playBtnBounds == null) {
             // initialize button locations
@@ -72,7 +72,7 @@ public class EntryScreen extends Screen {
         c.drawBitmap(exitbtm, null, exitBtnBounds, p);
 
         // version/copyright line
-        p.setColor(Color.rgb(0,70,0));  // dark greenish
+        p.setColor(Color.rgb(0,0,0));  // dark greenish
         p.setTextSize(act.TS_NORMAL);
         p.setTypeface(act.getGameFont());
         String msg = "v"+BuildConfig.VERSION_NAME;
