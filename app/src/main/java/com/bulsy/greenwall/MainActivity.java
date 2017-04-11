@@ -125,7 +125,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void playSound(Sound s, float vol, float rate) {
-        soundpool.play(soundMap.get(s), vol, vol, 0, 0, rate);
+        soundpool.play(soundMap.get(Sound.DEATH), vol, vol, 0, 0, rate);
     }
     public void playSound(Sound s) {
         playSound(s, 0.9f, 1);
