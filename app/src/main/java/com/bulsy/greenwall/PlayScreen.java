@@ -421,8 +421,8 @@ public class PlayScreen extends Screen {
         float zfact = 1.0f - (ZSTRETCH / (f.z + ZSTRETCH));
         int effx = (int) (f.x + (zfact * (xc - f.x)));
         int effy = (int) (f.y + (zfact * (yc - f.y)));
-        int effhalfw = (int) (f.seed.halfWidth * (1.0f - zfact));
-        int effhalfh = (int) (f.seed.halfHeight * (1.0f - zfact));
+        int effhalfw = (int) (10*f.seed.width* (1.0f - zfact));
+        int effhalfh = (int) (10*f.seed.height * (1.0f - zfact));
         scaledDst.set(effx - effhalfw, effy - effhalfh, effx + effhalfw, effy + effhalfh);
         c.drawBitmap(btm, null, scaledDst, p);
     }
@@ -495,7 +495,7 @@ public class PlayScreen extends Screen {
                 && frtime > possspawntime + MIN_SPAWN_INTERVAL_NANOS) {
             possspawntime = frtime;
             // "every now and then" make a fruit available
-            if (Math.random() > .6) {
+            if (Math.random() > .9) {
                 Fruit newf = null;
                 if (fruitsRecycled.size() > 0) { // recycle a fruit if we can
                     newf = fruitsRecycled.get(0);
