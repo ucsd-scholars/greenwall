@@ -50,7 +50,7 @@ public class PlayScreen extends Screen {
     static final Rect wallbounds_at_screen_z = new Rect();  // wall bounds at screen z
     static final float WALLZFACT = 1.0f - (ZSTRETCH / (WALL_Z + ZSTRETCH));
     static final long ONESEC_NANOS = 1000000000L;
-    static final int ACC_GRAVITY = 60;
+    static final int ACC_GRAVITY = 6000;
     static final int INIT_SELECTABLE_SPEED = 150;  // initial speed of selectable fruit at bottom of screen
     static final long MIN_SPAWN_INTERVAL_NANOS = 100000000L;
     static final float INIT_SELECTABLE_Y_FACTOR = 0.9f;
@@ -253,9 +253,9 @@ public class PlayScreen extends Screen {
      * initialize and start a game
      */
     void initGame() {
-        score = 999999;
+        score = 0;
         round = 1;
-        lives = -1;
+        lives = 3;
         hiscore = 0;
 
         clearLists();
